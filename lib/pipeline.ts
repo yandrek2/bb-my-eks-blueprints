@@ -17,7 +17,7 @@ export default class PipelineConstruct extends Construct {
     .addOns(new blueprints.ClusterAutoScalerAddOn, new blueprints.AwsLoadBalancerControllerAddOn())
     .teams(new TeamPlatform(account), new TeamApplication('developers',account));
   
-    const repoUrl = 'https://github.com/acastillo5690/capstone-project-apps';
+    const repoUrl = 'https://github.com/yandrek2/project-apps';
 
     const bootstrapRepo : blueprints.ApplicationRepository = {
         repoUrl,
@@ -39,10 +39,10 @@ export default class PipelineConstruct extends Construct {
   
     blueprints.CodePipelineStack.builder()
       .name("eks-blueprints-workshop-pipeline")
-      .owner("acastillo5690")
+      .owner("yandrek2")
       .repository({
           repoUrl: 'my-eks-blueprints',
-          credentialsSecretName: 'github-token-1',
+          credentialsSecretName: 'github-token',
           targetRevision: 'main'
       })
       
