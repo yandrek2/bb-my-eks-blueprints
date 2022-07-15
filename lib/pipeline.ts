@@ -21,7 +21,7 @@ export default class PipelineConstruct extends Construct {
 
     const bootstrapRepo : blueprints.ApplicationRepository = {
         repoUrl,
-        targetRevision: 'project',
+        targetRevision: 'main',
     }
 
     const stagingBootstrapArgo = new blueprints.ArgoCDAddOn({
