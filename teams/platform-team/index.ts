@@ -5,7 +5,7 @@ export class TeamPlatform extends PlatformTeam {
     constructor(accountID: string) {
         super({
             name: "platform",
-            users: [new ArnPrincipal(`arn:aws:iam::${accountID}:user/platform`), new ArnPrincipal(`arn:aws:iam::${accountID}:user/platform1`)]
+            users: [new ArnPrincipal(`arn:aws:iam::${accountID}:user/platform`)]
         })
     }
 }

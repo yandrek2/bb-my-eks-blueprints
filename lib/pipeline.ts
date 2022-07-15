@@ -14,7 +14,7 @@ export default class PipelineConstruct extends Construct {
     const blueprint = blueprints.EksBlueprint.builder()
     .account(account)
     .region(region)
-    .addOns(new blueprints.ClusterAutoScalerAddOn, new blueprints.AwsLoadBalancerControllerAddOn())
+    .addOns()//new blueprints.ClusterAutoScalerAddOn, new blueprints.AwsLoadBalancerControllerAddOn())
     .teams(new TeamPlatform(account), new TeamApplication('Devs',account));
   
     // const repoUrl = 'https://github.com/acastillo5690/capstone-project-apps';
